@@ -37,11 +37,11 @@ def main():
         dirpath = make_directories(parent_directory,directory)
         print(dirpath)
         fileWithSeed(seed)
-        runFortranNightmare()
+        runFortran()
         moveShit(dirpath)
         print(dirpath)
         runPrintagt(dirpath)
-        deleteShit()
+        delete()
         i+=1
 
     neutrons_spectra_df_total, protons_spectra_df_total, gamma_spectra_df_total, piminus_spectra_df_total, piplus_spectra_df_total, pi0_spectra_df_total, antineutrons_spectra_df_total, antiprotons_spectra_df_total, kminus_spectra_df_total, kplus_spectra_df_total, k0_spectra_df_total, antik0_spectra_df_total, printagt_spectra_df_total = append_dataframes()
@@ -56,7 +56,7 @@ def main():
     plot_printagt(printagt_spectra_df_total)
 
 
-def deleteShit():
+def delete():
     os.remove('for034')
     os.remove('for025')
     os.remove('for037')
@@ -68,7 +68,7 @@ def moveShit(dirpath):
     shutil.copy('./for033.dat', dirpath)
     shutil.copy('for037', './printagt/')
 
-def runFortranNightmare():
+def runFortran():
 
     # Run the first command
     # os.system('./msdm_exe')
