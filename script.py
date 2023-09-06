@@ -38,7 +38,7 @@ def main():
         print(dirpath)
         fileWithSeed(seed)
         runFortran()
-        moveShit(dirpath)
+        move(dirpath)
         print(dirpath)
         runPrintagt(dirpath)
         delete()
@@ -61,7 +61,7 @@ def delete():
     os.remove('for025')
     os.remove('for037')
 
-def moveShit(dirpath):
+def move(dirpath):
     shutil.copy('./for034', dirpath)
     shutil.copy('./for025', dirpath)
     shutil.copy('./for037', dirpath)
